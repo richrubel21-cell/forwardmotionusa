@@ -393,23 +393,26 @@
     letter-spacing: -0.2px;
   }
 
-  /* =================== ANNOUNCEMENT BANNER (scoreboard) =================== */
+  /* =================== ANNOUNCEMENT (floating white card) =================== */
   .announcement-banner {
     flex: 0 0 auto;
-    background: #F59E0B;
-    border-left: 6px solid #1e3a5f;
-    border-top: 2px solid #1e3a5f;
-    border-right: 2px solid #1e3a5f;
-    border-bottom: 2px solid #1e3a5f;
-    border-radius: 0;
-    padding: 24px 32px;
-    color: #1e3a5f;
+    background: #f3f4f6;
+    padding: 32px 24px;
   }
   .announcement-inner {
-    max-width: 1280px;
+    background: #ffffff;
+    border-left: 6px solid #1e3a5f;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+    max-width: 860px;
     margin: 0 auto;
-    position: relative;
-    padding-right: 130px;
+    padding: 28px 36px;
+  }
+  .announcement-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
   }
   .announcement-badge {
     display: inline-flex;
@@ -423,44 +426,34 @@
     text-transform: uppercase;
     padding: 5px 12px;
     border-radius: 999px;
-    margin-bottom: 12px;
-  }
-  .announcement-headline {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #1e3a5f;
-    line-height: 1.3;
-    letter-spacing: -0.2px;
-    margin-bottom: 8px;
-  }
-  .announcement-subtext {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #1e3a5f;
-    line-height: 1.5;
   }
   .announcement-date {
-    position: absolute;
-    top: 0;
-    right: 0;
     font-size: 12px;
     font-weight: 800;
     color: #1e3a5f;
     letter-spacing: 1.6px;
     text-transform: uppercase;
-    text-align: right;
+  }
+  .announcement-headline {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1e3a5f;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+    margin-top: 12px;
+  }
+  .announcement-subtext {
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.55;
+    margin-top: 8px;
   }
   @media (max-width: 720px) {
-    .announcement-banner { padding: 18px 18px 20px; border-left-width: 5px; }
-    .announcement-inner { padding-right: 0; }
-    .announcement-headline { font-size: 1.15rem; }
+    .announcement-banner { padding: 24px 16px; }
+    .announcement-inner { padding: 22px 22px; border-left-width: 5px; }
+    .announcement-top { flex-direction: column; align-items: flex-start; gap: 6px; }
+    .announcement-headline { font-size: 1.1rem; }
     .announcement-subtext { font-size: 0.9rem; }
-    .announcement-date {
-      position: static;
-      display: block;
-      margin-top: 12px;
-      text-align: left;
-    }
   }
 
   /* =================== FOOTER =================== */
@@ -548,13 +541,15 @@
   </div>
 </section>
 
-<!-- =================== ANNOUNCEMENT BANNER =================== -->
+<!-- =================== ANNOUNCEMENT =================== -->
 <section class="announcement-banner">
   <div class="announcement-inner">
-    <span class="announcement-badge">🏆 Announcement</span>
+    <div class="announcement-top">
+      <span class="announcement-badge">🏆 Announcement</span>
+      <span class="announcement-date">May 2026</span>
+    </div>
     <h2 class="announcement-headline">Forward Motion USA Welcomes 2× World Series Champion Jonny Gomes to Advisory Board</h2>
     <p class="announcement-subtext">13-year MLB veteran, two-time World Series Champion, and youth development leader Jonny Gomes has joined the Forward Motion USA Advisory Board.</p>
-    <span class="announcement-date">May 2026</span>
   </div>
 </section>
 
