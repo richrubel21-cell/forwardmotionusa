@@ -160,6 +160,69 @@
     line-height: 1.4;
   }
 
+  /* PAGE-SPECIFIC: advisory board */
+  .advisor-section {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+  }
+  .advisor-section-mark {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .advisor {
+    background: var(--cream-2);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold-2);
+    border-radius: 10px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+  .advisor-photo {
+    width: 100%;
+    aspect-ratio: 4/5;
+    border-radius: 8px;
+    background-color: #ddd;
+    background-image: url("jonny-gomes.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  .advisor-name {
+    font-family: var(--display);
+    font-size: 26px;
+    color: var(--navy);
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .advisor-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 6px 0 2px;
+  }
+  .advisor-subtitle {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--navy-2);
+    margin-bottom: 10px;
+    letter-spacing: 0.2px;
+  }
+  .advisor-bio {
+    font-size: 12px;
+    color: var(--ink);
+    line-height: 1.45;
+  }
+
   /* FOOTER */
   footer {
     flex: 0 0 auto; background: var(--cream-2); color: var(--muted);
@@ -175,6 +238,8 @@
     body { overflow: auto; }
     main.page { padding: 32px 24px; overflow: visible; }
     .founders { grid-template-columns: 1fr; }
+    .advisor { grid-template-columns: 1fr; }
+    .advisor-photo { max-width: 220px; margin: 0 auto; }
   }
   @media (max-width: 768px) {
     .nav { position: relative; }
@@ -231,6 +296,19 @@
         <div class="founder-name">Rich Rubel</div>
         <div class="founder-title">Co-Founder &amp; Technical Director</div>
         <p class="founder-bio">Rich Rubel is a former Division I baseball player at the University of Connecticut. He has coached at South Lake Tahoe High School, served as hitting coach at Colorado School of Mines, and owned a premier training facility in Las Vegas. With a B.S. in Information Technology, Rich founded SwingCheck AI and PredictWell Health AI — the technology backbone powering Forward Motion USA's mission worldwide.</p>
+      </article>
+    </div>
+
+    <div class="advisor-section">
+      <div class="advisor-section-mark">Advisory Board</div>
+      <article class="advisor jonny">
+        <div class="advisor-photo" aria-label="Jonny Gomes"></div>
+        <div class="advisor-content">
+          <div class="advisor-name">Jonny Gomes</div>
+          <div class="advisor-title">Advisory Board Member</div>
+          <div class="advisor-subtitle">2× World Series Champion · 13-Year MLB Veteran</div>
+          <p class="advisor-bio">Jonny Gomes is a 13-year MLB veteran and two-time World Series Champion. Drafted in the 18th round by the Tampa Bay Devil Rays in 2001, he was named Minor League Player of the Year and won a Triple-A Championship in 2003 before making his MLB debut that September. The accolades kept coming — a 2004 Arizona Fall League Championship, then Winter Ball Player of the Year and a Caribbean World Series title in 2004/05. He went on to championship runs with the 2008 Tampa Bay Rays (American League Champions), 2010 Cincinnati Reds (NL Central Champions), 2012 Oakland A's (AL West Champions), and the 2014 Oakland A's Wild Card team — earning World Series rings with the 2013 Boston Red Sox, where he hit the go-ahead three-run home run in Game 4, and the 2015 Kansas City Royals. He also played professionally in Japan. Today, Jonny serves as the Arizona Diamondbacks' Minor League Outfield &amp; Baserunning Coordinator, has built a broadcasting career, partners with leading baseball data and ball-tracking companies, and is co-founder of Indie Pro, a full-service baseball advising and agency.</p>
+        </div>
       </article>
     </div>
   </div>

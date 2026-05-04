@@ -44,7 +44,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: auto;
   }
 
   a { color: inherit; text-decoration: none; }
@@ -393,6 +393,75 @@
     letter-spacing: -0.2px;
   }
 
+  /* =================== IN THE NEWS =================== */
+  .news-section {
+    flex: 0 0 auto;
+    background: var(--cream);
+    padding: 28px 36px 36px;
+    border-top: 1px solid var(--line);
+  }
+  .news-inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .news-mark {
+    font-family: var(--display);
+    font-size: clamp(24px, 2.4vw, 34px);
+    letter-spacing: 2px;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  .news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .news-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold-2);
+    border-radius: 12px;
+    padding: 18px 22px;
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(11, 31, 58, 0.08);
+  }
+  .news-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .news-card-icon { font-size: 18px; line-height: 1; }
+  .news-card-date {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    background: var(--cream-2);
+    padding: 3px 9px;
+    border-radius: 4px;
+  }
+  .news-card-headline {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.35;
+    letter-spacing: -0.1px;
+    margin-bottom: 8px;
+  }
+  .news-card-body {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.55;
+  }
+
   /* =================== FOOTER =================== */
   footer {
     flex: 0 0 auto;
@@ -535,6 +604,23 @@
     <div class="why-row">
       <div class="why-label label-why">Why</div>
       <div class="why-line">Talent is everywhere. We offer the tools for success that were previously priced out of reach.</div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== IN THE NEWS =================== -->
+<section class="news-section">
+  <div class="news-inner">
+    <div class="news-mark">In The News</div>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-card-meta">
+          <span class="news-card-icon">🏆</span>
+          <span class="news-card-date">May 2026</span>
+        </div>
+        <h3 class="news-card-headline">Forward Motion USA Welcomes 2× World Series Champion Jonny Gomes to Advisory Board</h3>
+        <p class="news-card-body">We are proud to announce that 13-year MLB veteran and two-time World Series Champion Jonny Gomes has joined the Forward Motion USA Advisory Board. Jonny's journey from an 18th-round draft pick to World Series hero embodies the exact spirit of resilience, hard work, and giving back that drives our mission. His commitment to youth development and his experience with baseball data and player development make him a transformative addition to our team.</p>
+      </article>
     </div>
   </div>
 </section>
